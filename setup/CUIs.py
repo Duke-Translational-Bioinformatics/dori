@@ -216,7 +216,7 @@ CREATE TABLE `CUIs` (
 /*  `uploaded` DATE DEFAULT CURRENT_DATE,*/
   
   PRIMARY KEY (`CUI`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
 """
 cur2.execute(refresh_query)
 cur2.close()
@@ -259,7 +259,7 @@ for CUI in CUIs.keys():
             values[i] = "'%s'" % str(values[i])
     sub_query = "INSERT INTO `CUIs` (`" + "`, `".join(columns) + "`) VALUES ( " + ", ".join(values) + " );\n"
     insert_query += sub_query
-insert_query += "COMMIT;\n"
+insert_query += "COMMIT\n"
 
 cur3.execute(insert_query)
 
