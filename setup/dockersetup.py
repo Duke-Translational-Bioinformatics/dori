@@ -15,7 +15,7 @@ cur = cnx.cursor()
 
 
 cur.execute("CREATE DATABASE doiarchive")
-cur.execute("CREATE USER 'doirisks'@'localhost' IDENTIFIED BY 'bitnami'"
+cur.execute("CREATE USER 'doirisks'@'localhost' IDENTIFIED BY 'bitnami'")
 cur.execute("GRANT ALL PRIVILEGES ON doiarchive.* TO 'doirisks'@'localhost'")
 
 
