@@ -3,7 +3,7 @@
 # dorihub.sh
 # by Ted M
 #
-# setup script for a linode/lamp docker container
+# setup script for a ubuntu:14.04 docker container
 # apache2 and mysql must started in docker container (for now)
 
 # update the container to make installation possible
