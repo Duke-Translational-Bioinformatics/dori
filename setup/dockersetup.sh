@@ -10,7 +10,7 @@
 apt-get update -y
 apt-get install -y --reinstall mysql-server
 
-grep -n 
+grep -n "ERROR" /var/log/mysql/error.log
 
 ## install git and pull to a known directory
 #apt-get install -y git
