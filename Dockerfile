@@ -8,5 +8,5 @@ FROM linode/lamp
 MAINTAINER "DOI RISKS"
 
 ADD . /src
-RUN sudo bash /src/setup/dockersetup.sh
+RUN DEBIAN_FRONTEND=noninteractive apt-get bash /src/setup/dockersetup.sh
 
