@@ -171,6 +171,9 @@ while cur1.nextset():
 # close cursor 1
 cur1.close()
 
+# use results
+cnx.use_result()
+
 # special adjustments 1: age cannot be less than zero
 if CUIs.has_key('C0804405'):   
     CUIs['C0804405']['defaultlower'] = 0
