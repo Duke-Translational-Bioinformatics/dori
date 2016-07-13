@@ -201,8 +201,8 @@ cur2 = cnx.cursor()
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 """
-refresh_query = """DROP TABLE IF EXISTS `CUIs`;
-CREATE TABLE `CUIs` (
+refresh_query_1 = """DROP TABLE IF EXISTS `CUIs`"""
+refresh_query_2 = """CREATE TABLE `CUIs` (
 
   `CUI` varchar(255) NOT NULL,      /*identification*/
   `name1` varchar(255),
@@ -227,9 +227,10 @@ CREATE TABLE `CUIs` (
 /*  `uploaded` DATE DEFAULT CURRENT_DATE,*/
   
   PRIMARY KEY (`CUI`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
-"""
-cur2.execute(refresh_query)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci"""
+
+cur2.execute(refresh_query_1)
+cur2.execute(refresh_query_2)
 cur2.close()
 
 cur3 = cnx.cursor()
