@@ -95,7 +95,7 @@ CREATE TABLE `models` (
 /*  `uploaded` DATE DEFAULT CURRENT_DATE,*/
   
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
 
 """
 cur2.execute(refresh_query)
