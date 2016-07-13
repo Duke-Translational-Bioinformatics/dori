@@ -163,7 +163,7 @@ while DOI is not None:
     
     
 # clear result sets (https://github.com/farcepest/MySQLdb1/issues/28)
-while cur3.nextset():
+while cur1.nextset():
     # debugging print:
     print('threw out a result set')
     pass
