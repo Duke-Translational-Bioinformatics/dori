@@ -174,7 +174,7 @@ def run_scripts_in(mypath,recurs):
 
 # run the scripts and build query
 insert_query = run_scripts_in(START,0)
-insert_query += "COMMIT;\n"
+insert_query += "COMMIT\n"
 
 
 cur3.execute(insert_query)
