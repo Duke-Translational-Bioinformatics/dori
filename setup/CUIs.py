@@ -197,9 +197,11 @@ for CUI in CUIs.keys():
 
 cur2 = cnx.cursor()
 # refresh the table
-refresh_query = """DROP TABLE IF EXISTS `CUIs`;
+"""
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
+"""
+refresh_query = """DROP TABLE IF EXISTS `CUIs`;
 CREATE TABLE `CUIs` (
 
   `CUI` varchar(255) NOT NULL,      /*identification*/
