@@ -7,7 +7,7 @@
 # apache2 and mysql must started in docker container (for now)
 
 # update the container to make installation possible
-apt-get update -y
+#apt-get update -y
 #apt-get install -y --reinstall mysql-server
 
 grep -n "ERROR" /var/log/mysql/error.log
