@@ -7,6 +7,7 @@
 # apache2 and mysql must started in docker container (for now)
 
 # update the container to make installation possible
+apt-get install -y --reinstall mysql-server
 apt-get update -y
 
 ## install git and pull to a known directory
