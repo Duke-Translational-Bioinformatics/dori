@@ -8,7 +8,7 @@
 
 # update the container to make installation possible
 apt-get update -y
-apt-get install -y --reinstall mysql-server
+#apt-get install -y --reinstall mysql-server
 
 grep -n "ERROR" /var/log/mysql/error.log
 
@@ -28,8 +28,6 @@ grep -n "ERROR" /var/log/mysql/error.log
 
 # install R?
 #TODO
-
-echo 'BETWEENBETWEENBETWEENBETWEENBETWEENBETWEENBETWEENBETWEENBETWEENBETWEENBETWEENBETWEENBETWEENBETWEENBETWEENBETWEENBETWEENBETWEENBETWEENBETWEENBETWEENBETWEENBETWEENBETWEENBETWEENBETWEENBETWEENBETWEEN'
 
 # start mysql server
 service mysql start
