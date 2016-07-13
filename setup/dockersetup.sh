@@ -7,8 +7,10 @@
 # apache2 and mysql must started in docker container (for now)
 
 # update the container to make installation possible
-apt-get install -y --reinstall mysql-server
 apt-get update -y
+apt-get install -y --reinstall mysql-server
+
+grep -n 
 
 ## install git and pull to a known directory
 #apt-get install -y git
@@ -19,10 +21,10 @@ apt-get update -y
 #git pull origin master
 
 # install necessary python (condense to a requirements.txt or .yml or something?)
-apt-get install -y python2.7
-apt-get install -y python-sql
-apt-get install -y python-MySQLdb
-apt-get install -y python-numpy
+#apt-get install -y python2.7
+#apt-get install -y python-sql
+#apt-get install -y python-MySQLdb
+#apt-get install -y python-numpy
 
 # install R?
 #TODO
@@ -30,22 +32,10 @@ apt-get install -y python-numpy
 # start mysql server
 service mysql start
 
-# make a small sql command file, run it, and delete it
-# maybe do this step with python instead?
-#echo "CREATE DATABASE doiarchive ; CREATE USER doirisks@localhost IDENTIFIED BY 'bitnami'; GRANT ALL PRIVILEGES ON doiarchive.* TO 'doirisks'@'localhost'; COMMIT;" > sqlsetup.sql
-#mysql -u root -p"Admin2015" < sqlsetup.sql
-#rm sqlsetup.sql
-
 # run setup scripts
-cd /src/setup
-./dockersetup.py
-./setup.sh
-
-# this should not be necessary TODO
-sleep 1
-./CUIs.py
-sleep 1
-./CUIs.py
+#cd /src/setup
+#./dockersetup.py
+#./setup.sh
 
 # set interface as the default webpage of the server
 cp -r /src/interface /var/www/interface
