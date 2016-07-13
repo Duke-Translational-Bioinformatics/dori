@@ -160,6 +160,15 @@ while DOI is not None:
     
     # get next DOI
     DOI = cur1.fetchone()
+    
+    
+# clear result sets (https://github.com/farcepest/MySQLdb1/issues/28)
+while cur3.nextset():
+    # debugging print:
+    print('threw out a result set')
+    pass
+    
+# close cursor 1
 cur1.close()
 
 # special adjustments 1: age cannot be less than zero

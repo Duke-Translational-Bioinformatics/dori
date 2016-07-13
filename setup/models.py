@@ -181,6 +181,8 @@ cur3.execute(insert_query)
 
 # clear result sets (https://github.com/farcepest/MySQLdb1/issues/28)
 while cur3.nextset():
+    # debugging print:
+    print('threw out a result set')
     pass
 
 cur3.close()
