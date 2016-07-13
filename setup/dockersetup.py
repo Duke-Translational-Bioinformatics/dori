@@ -9,7 +9,7 @@ makes a mysql user on the docker container in preparation for other setup files.
 import MySQLdb as sql
 
 
-cnx = sql.connect(host = 'localhost', user = 'root', passwd = 'Admin2015')
+cnx = sql.connect(host = 'localhost', user = 'root')#, passwd = 'Admin2015')
 cur = cnx.cursor()
 
 

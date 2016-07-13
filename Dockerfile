@@ -4,7 +4,7 @@
 #
 #####################################
 
-FROM linode/lamp
+FROM ubuntu:14.04
 MAINTAINER "DOI RISKS"
 
 ADD . /src

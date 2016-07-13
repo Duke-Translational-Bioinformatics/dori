@@ -7,24 +7,16 @@
 # apache2 and mysql must started in docker container (for now)
 
 # update the container to make installation possible
-#apt-get update -y
-#apt-get install -y --reinstall mysql-server
-
-grep -n "ERROR" /var/log/mysql/error.log
-
-## install git and pull to a known directory
-#apt-get install -y git
-#mkdir /home/dori-master
-#cd /home/dori-master
-#git init
-#git remote add origin https://github.com/doirisks/dori.git
-#git pull origin master
+apt-get update -y
+apt-get install -y apache2
+apt-get install -y mysql-server
+apt-get install -y php5
 
 # install necessary python (condense to a requirements.txt or .yml or something?)
-#apt-get install -y python2.7
-#apt-get install -y python-sql
-#apt-get install -y python-MySQLdb
-#apt-get install -y python-numpy
+apt-get install -y python2.7
+apt-get install -y python-sql
+apt-get install -y python-MySQLdb
+apt-get install -y python-numpy
 
 # install R?
 #TODO
@@ -33,9 +25,9 @@ grep -n "ERROR" /var/log/mysql/error.log
 service mysql start
 
 # run setup scripts
-#cd /src/setup
-#./dockersetup.py
-#./setup.sh
+cd /src/setup
+./dockersetup.py
+./setup.sh
 
 # set interface as the default webpage of the server
 cp -r /src/interface /var/www/interface
