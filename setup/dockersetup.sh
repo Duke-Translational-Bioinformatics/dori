@@ -33,11 +33,10 @@ cd /src/setup
 cp -r /src/interface /var/www/interface
 mkdir /var/www/interface/log
 chmod -R 755 /var/www/interface
-sed -i "s/example.com\/public_html/interface\/public/g" /etc/apache2/sites-available/example.com.conf
-sed -i "s/example.com/interface/g" /etc/apache2/sites-available/example.com.conf
-cp /etc/apache2/sites-available/example.com.conf /etc/apache2/sites-available/interface.conf
-a2dissite example.com.conf 
-rm /etc/apache2/sites-available/example.com.conf 
+sed -i "s/\/var\/www\/html/\/var\/www\/interface\/public/g" /etc/apache2/sites-available/000-default.conf
+cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/interface.conf
+a2dissite 000-default.conf 
+rm /etc/apache2/sites-available/000-default.conf 
 a2ensite interface.conf
 chmod -R 755 /src/interface/
 
