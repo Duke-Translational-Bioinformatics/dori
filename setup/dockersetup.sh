@@ -11,6 +11,7 @@ apt-get update -y
 apt-get install -y apache2
 apt-get install -y mysql-server
 apt-get install -y php5
+apt-get install -y php5-mysql
 
 # install necessary python (condense to a requirements.txt or .yml or something?)
 apt-get install -y python2.7
