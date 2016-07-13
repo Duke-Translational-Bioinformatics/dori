@@ -35,11 +35,9 @@ service mysql start
 #mysql -u root -p"Admin2015" < sqlsetup.sql
 #rm sqlsetup.sql
 
-# setup db via python
-./dockersetup.py
-
-# run setup scripts individually
+# run setup scripts
 cd /src/setup
+./dockersetup.py
 ./setup.sh
 
 # this should not be necessary TODO
