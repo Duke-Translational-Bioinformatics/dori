@@ -19,7 +19,7 @@
     // your database's username
     define("USERNAME", "doirisks");
     
-    define("MODELROOT","/home/fyodr/dori-master/models/");
+    define("MODELROOT","/src/models/");
 
     /**
      * Executes SQL statement, possibly with parameters, returning
