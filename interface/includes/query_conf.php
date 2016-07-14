@@ -24,6 +24,8 @@
     /**
      * Executes SQL statement, possibly with parameters, returning
      * an array of all rows in result set or false on (non-fatal) error.
+     *
+     * code from cs50 course materials
      */
     function query(/* $sql [, ... ] */)
     {
