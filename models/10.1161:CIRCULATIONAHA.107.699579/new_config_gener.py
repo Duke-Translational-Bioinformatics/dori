@@ -75,7 +75,6 @@ with open(config_name + '.json','w') as output:
 
 # dump sql config file 
 import sql
-sqlfile = open(config_name + '.sql','w')
 models_table = sql.Table('models')
 
 modvalues = [
@@ -141,5 +140,4 @@ query = query % tuple(model_tup[1])
 
 #query = format(model_tup[0],*model_tup[1])
 
-sqlfile.write(query)
-sqlfile.close()
+print(query + ';\n')

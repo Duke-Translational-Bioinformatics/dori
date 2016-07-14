@@ -1,0 +1,10 @@
+######################################################################## Dockerfile to build model 21
+# Based on continuumio/miniconda, produced by dockerwriter.py
+#######################################################################
+
+FROM continuumio/miniconda
+MAINTAINER "DOI RISKS"
+ADD ./ model21
+RUN cp -n /model21/model_a.py /model21/model.py
+RUN conda install -y pip
+RUN conda install -y --file /model21/requirements.txt

@@ -1,12 +1,10 @@
-#######################################################################
-# Dockerfile to build model 31
-# Based on elyase/conda, produced by dockerwriter.py
+######################################################################## Dockerfile to build model 31
+# Based on continuumio/miniconda, produced by dockerwriter.py
 #######################################################################
 
-FROM elyase/conda
+FROM continuumio/miniconda
 MAINTAINER "DOI RISKS"
-COPY ./ model
-COPY ./modeld.py model.py
-COPY ./requirements.txt requirements.txt
-COPY ./modeld.py /modeld.py
-COPY ./exampled.py /exampled.py
+ADD ./ model31
+RUN cp -n /model31/modeld.py /model31/model.py
+RUN conda install -y pip
+RUN conda install -y --file /model31/requirements.txt

@@ -1,0 +1,10 @@
+######################################################################## Dockerfile to build model 17
+# Based on continuumio/miniconda, produced by dockerwriter.py
+#######################################################################
+
+FROM continuumio/miniconda
+MAINTAINER "DOI RISKS"
+ADD ./ model17
+RUN cp -n /model17/model.py /model17/model.py
+RUN conda install -y pip
+RUN conda install -y --file /model17/requirements.txt

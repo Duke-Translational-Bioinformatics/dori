@@ -1,12 +1,10 @@
-#######################################################################
-# Dockerfile to build model 12
-# Based on elyase/conda, produced by dockerwriter.py
+######################################################################## Dockerfile to build model 12
+# Based on continuumio/miniconda, produced by dockerwriter.py
 #######################################################################
 
-FROM elyase/conda
+FROM continuumio/miniconda
 MAINTAINER "DOI RISKS"
-COPY ./ model
-COPY ./model_e.py model.py
-COPY ./requirements.txt requirements.txt
-COPY ./model_e.py /model_e.py
-COPY ./example_e.py /example_e.py
+ADD ./ model12
+RUN cp -n /model12/model_b.py /model12/model.py
+RUN conda install -y pip
+RUN conda install -y --file /model12/requirements.txt

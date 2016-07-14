@@ -1,0 +1,10 @@
+######################################################################## Dockerfile to build model 32
+# Based on continuumio/miniconda, produced by dockerwriter.py
+#######################################################################
+
+FROM continuumio/miniconda
+MAINTAINER "DOI RISKS"
+ADD ./ model32
+RUN cp -n /model32/model_a.py /model32/model.py
+RUN conda install -y pip
+RUN conda install -y --file /model32/requirements.txt

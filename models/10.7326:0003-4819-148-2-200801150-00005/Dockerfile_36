@@ -1,0 +1,10 @@
+######################################################################## Dockerfile to build model 36
+# Based on continuumio/miniconda, produced by dockerwriter.py
+#######################################################################
+
+FROM continuumio/miniconda
+MAINTAINER "DOI RISKS"
+ADD ./ model36
+RUN cp -n /model36/model_e.py /model36/model.py
+RUN conda install -y pip
+RUN conda install -y --file /model36/requirements.txt

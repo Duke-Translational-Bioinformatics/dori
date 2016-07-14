@@ -1,12 +1,10 @@
-#######################################################################
-# Dockerfile to build model 30
-# Based on elyase/conda, produced by dockerwriter.py
+######################################################################## Dockerfile to build model 30
+# Based on continuumio/miniconda, produced by dockerwriter.py
 #######################################################################
 
-FROM elyase/conda
+FROM continuumio/miniconda
 MAINTAINER "DOI RISKS"
-COPY ./ model
-COPY ./modelc.py model.py
-COPY ./requirements.txt requirements.txt
-COPY ./modelc.py /modelc.py
-COPY ./examplec.py /examplec.py
+ADD ./ model30
+RUN cp -n /model30/modelc.py /model30/model.py
+RUN conda install -y pip
+RUN conda install -y --file /model30/requirements.txt

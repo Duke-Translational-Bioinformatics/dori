@@ -1,0 +1,10 @@
+######################################################################## Dockerfile to build model 16
+# Based on continuumio/miniconda, produced by dockerwriter.py
+#######################################################################
+
+FROM continuumio/miniconda
+MAINTAINER "DOI RISKS"
+ADD ./ model16
+RUN cp -n /model16/model_f.py /model16/model.py
+RUN conda install -y pip
+RUN conda install -y --file /model16/requirements.txt
